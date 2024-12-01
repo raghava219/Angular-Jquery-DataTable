@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Interviews list</h1>
+
+    <table class="table table-hover" cellspacing="0">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Company</th>
+                <th>City</th>
+                <th>DOJ</th>
+                <th>Selected</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let client of clients">
+                <td>{{client.firstName}}</td>
+                <td><input type="text" name="lastName" value={{client.lastName}} /></td>
+                <td>{{client.company}}</td>
+                <td>{{client.city}}</td>
+                <td><input type="date" name="DateOfJoining" value={{client.lastName}} /></td>
+                <td>
+                    <fieldset>
+                        <input type="radio" id={{client.id}} name={{client.id}} value="YES" selected>
+                        <label for="Yes">Yes</label><br />
+                        <input type="radio" id={{client.id}} name={{client.id}} value="No">
+                        <label for="NO">No</label>
+                    </fieldset>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
